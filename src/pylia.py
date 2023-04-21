@@ -9,6 +9,7 @@ class Julia:
     def __init__(self, path: str):
         self.path = path
         self.functions = []
+        self.get_funcs()
 
     def call_func(self,
                         func: str,
