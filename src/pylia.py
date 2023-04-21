@@ -9,7 +9,7 @@ class Julia:
         self.path = path
         self.functions = []
         self.get_funcs()
-        # self.declare_funcs()
+        self.declare_funcs()
 
     def get_funcs(self):
         """
@@ -37,16 +37,15 @@ class Julia:
         output = output_str.strip().decode("utf-8")
         return output
 
-    # def declare_funcs(self):
-    #     for function_name in self.functions:
-    #         def func(self, args: Union[int, List[int], float, List[float]]):
-    #             args_list = [str(num) for num in args]
+    def declare_funcs(self):
+        for function_name in self.functions:
+            def func(self, args: Union[int, List[int], float, List[float]], fname=function_name):
+                args_list = [str(num) for num in args]
 
-    #             cmd = (["julia", self.path, function_name] + args_list)
-    #             output_str = check_output(cmd)
+                cmd = (["julia", self.path, fname] + args_list)
+                output_str = check_output(cmd)
 
-    #             output = output_str.strip().decode("utf-8")
-    #             return output
+                output = output_str.strip().decode("utf-8")
+                return output
 
-    #         print(func)
-    #     setattr(Julia, function_name, func)
+            setattr(Julia, function_name.replace('-', '_'), func)
