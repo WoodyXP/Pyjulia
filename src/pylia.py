@@ -38,6 +38,9 @@ class Julia:
         return output
 
     def declare_funcs(self):
+        """
+        automatically declares functions according to self.funcs
+        """
         for function_name in self.functions:
             def func(self, args: Union[int, List[int], float, List[float]], fname=function_name):
                 args_list = [str(num) for num in args]
