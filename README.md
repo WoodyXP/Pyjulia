@@ -23,6 +23,11 @@ end
 @main function multiply(num::Integer...)
     println(prod(num))
 end
+
+@main function greet(name, age, num::Integer...)
+    println(name, age)
+    println(num)
+end
 ```
 ### call_func method
 Let's say the content of this julia code belongs to a file called ```example.jl```. You can now call the add and multiply functions inside your python code:
@@ -54,6 +59,11 @@ end
 @main function multiply(num::Integer...)
     println(prod(num))
 end
+
+@main function greet(name, age, num::Integer...)
+    println(name, age)
+    println(num)
+end
 ```
 Now in order to call these function within your python code you need to do this:
 > ⚠️ **_NOTE:_**  Your IDE/text editor may tell you "Unresolved attribute reference add/multiply for class Julia". There's no need to worry. It should still work just as fine.
@@ -70,3 +80,16 @@ Your output should still look like this:
 ```
 10 30
 ```
+
+The ```greet``` function inside the julia file has multiple arguments. But this doesn't prevent us from calling it from python. It works just as fine as the other examples above:
+```python
+greet_args = ["Pylia", 19, 2, 3, 4, 5]
+greeting = julia_module.greet(greet_args)
+print(greeting)
+```
+The following output should be printed to the terminal:
+```
+Pylia19
+(2, 3, 4, 5)
+```
+You can just treat them as normal positional variables and the [Fire](https://github.com/ylxdzsw/Fire.jl) package from julia will parse the arguments automatically.

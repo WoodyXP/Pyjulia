@@ -13,3 +13,8 @@ print(julia_sum, julia_prod)
 output = julia_module.add(my_args)
 output2 = julia_module.multiply(my_args)
 print(output, output2)
+
+# you can also have multiple arguments
+greet_args = ["Pylia", 19, 2, 3, 4, 5]
+greeting = julia_module.greet(greet_args)
+print(greeting)

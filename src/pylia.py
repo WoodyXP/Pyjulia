@@ -1,5 +1,4 @@
 from subprocess import check_output
-from typing import List, Union
 
 class Julia:
     """
@@ -24,9 +23,7 @@ class Julia:
 
         return self.functions
 
-    def call_func(self,
-                        func: str,
-                        args: Union[int, List[int], float, List[float]]):
+    def call_func(self, func: str, args: list):
         """
         Used to call julia functions from python
         """
@@ -43,7 +40,7 @@ class Julia:
         automatically declares functions according to self.functions
         """
         for function_name in self.functions:
-            def func(self, args: Union[int, List[int], float, List[float]], fname=function_name):
+            def func(self, args: list, fname=function_name):
                 args_list = [str(num) for num in args]
 
                 cmd = ([self.julia_interpreter, self.path, fname] + args_list)
