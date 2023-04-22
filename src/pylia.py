@@ -5,8 +5,9 @@ class Julia:
     """
     Used to call Julia functions from python
     """
-    def __init__(self, path: str):
+    def __init__(self, path: str, julia_interpreter: str = "julia"):
         self.path = path
+        self.julia_interpreter = julia_interpreter
         self.functions = []
         self.get_funcs()
         self.declare_funcs()
@@ -31,7 +32,7 @@ class Julia:
         """
         args_list = [str(num) for num in args]
 
-        cmd = (["julia", self.path, func] + args_list)
+        cmd = ([self.julia_interpreter, self.path, func] + args_list)
         output_str = check_output(cmd)
 
         output = output_str.strip().decode("utf-8")
@@ -45,7 +46,7 @@ class Julia:
             def func(self, args: Union[int, List[int], float, List[float]], fname=function_name):
                 args_list = [str(num) for num in args]
 
-                cmd = (["julia", self.path, fname] + args_list)
+                cmd = ([self.julia_interpreter, self.path, fname] + args_list)
                 output_str = check_output(cmd)
 
                 output = output_str.strip().decode("utf-8")
