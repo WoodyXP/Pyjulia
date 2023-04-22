@@ -1,7 +1,6 @@
 import pylia
 
 julia_module = pylia.Julia("./example.jl")
-julia_module.julia_interpreter = "C:/Users/ruben/AppData/Local/Programs/Julia-1.8.3/bin/julia.exe"
 
 my_args = [2, 3, 5]
 
