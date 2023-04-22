@@ -46,7 +46,7 @@ end
 end
 ```
 Now in order to call these function within your python code you need to do this:
-> ⚠️ **_NOTE:_**  Your IDE/text editor may tell you "Instance of 'Julia' has no 'add'/'multiply' member". There's no need to worry. It should still work just as fine.
+> ⚠️ **_NOTE:_**  Your IDE/text editor may tell you "Unresolved attribute reference add/multiply for class Julia". There's no need to worry. It should still work just as fine.
 ```python
 import pylia
 
