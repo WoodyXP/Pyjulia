@@ -1,6 +1,6 @@
 import pylia
 
-julia_module = pylia.Julia("./example.jl")
+julia_module = pylia.Pylia("./example.jl")
 
 my_args = [2, 3, 5]
 

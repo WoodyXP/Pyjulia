@@ -1,6 +1,6 @@
 from subprocess import check_output
 
-class Julia:
+class Pylia:
     """
     Used to call Julia functions from python
     """

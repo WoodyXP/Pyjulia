@@ -6,7 +6,7 @@ The julia interpreter is inside the PATH for the following examples. If you do n
 ```python
 import pylia
 
-julia_module = pylia.Julia("./example.jl")
+julia_module = pylia.Pylia("./example.jl")
 julia_module.julia_interpreter = "your path to julia interpreter"
 
 # execute code...
@@ -34,7 +34,7 @@ Let's say the content of this julia code belongs to a file called ```example.jl`
 ```python
 import pylia
 
-julia_module = pylia.Julia("./example.jl")
+julia_module = pylia.Pylia("./example.jl")
 
 my_args = [2, 3, 5]
 
@@ -70,7 +70,7 @@ Now in order to call these function within your python code you need to do this:
 ```python
 import pylia
 
-julia_module = pylia.Julia("./example.jl")
+julia_module = pylia.Pylia("./example.jl")
 
 output = julia_module.add(my_args)
 output2 = julia_module.multiply(my_args)
@@ -83,6 +83,9 @@ Your output should still look like this:
 
 The ```greet``` function inside the julia file has multiple arguments. But this doesn't prevent us from calling it from python. It works just as fine as the other examples above:
 ```python
+import pylia
+
+julia_module = pylia.Pylia("./example.jl")
 greet_args = ["Pylia", 19, 2, 3, 4, 5]
 greeting = julia_module.greet(greet_args)
 print(greeting)
