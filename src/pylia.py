@@ -49,4 +49,4 @@ class Pylia:
                 output = output_str.strip().decode("utf-8")
                 return output
 
-            setattr(Julia, function_name.replace('-', '_'), func)
+            setattr(Pylia, function_name.replace('-', '_'), func)
