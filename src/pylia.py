@@ -50,3 +50,6 @@ class Pylia:
                 return output
 
             setattr(Pylia, function_name.replace('-', '_'), func)
+
+if __name__ == '__main__':
+    print('This is a module! Please import using:\nimport pylia')
