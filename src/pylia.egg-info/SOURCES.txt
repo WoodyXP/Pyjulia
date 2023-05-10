@@ -1,9 +1,9 @@
 LICENSE
 README.md
 pyproject.toml
+src/pylia/__init__.py
+src/pylia/pylia.py
 src/pylia.egg-info/PKG-INFO
 src/pylia.egg-info/SOURCES.txt
 src/pylia.egg-info/dependency_links.txt
 src/pylia.egg-info/top_level.txt
-src/pylia_package/__init__.py
-src/pylia_package/pylia.py
