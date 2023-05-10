@@ -4,9 +4,9 @@ version = "0.0.1"
 authors = [
   { name="Stefan Arsic", email="stiefelwoods@gmail.com"},
 ]
-description = "This package is made for people to be able to use julia with python."
+description = "A package that allows to use Julia within Python."
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.5"
 classifiers = [
     "Programming Language :: Python :: 3, Julia :: 1",
     "License :: OSI Approved :: MIT License",
