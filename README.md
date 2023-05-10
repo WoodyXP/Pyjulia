@@ -1,12 +1,12 @@
-# Pylia
-Pylia is a python module for calling julia functions inside your python code.
+# Pyjulia
+Pyjulia is a python module for calling julia functions inside your python code.
 
 ## Usage
 The julia interpreter is inside the PATH for the following examples. If you do not have julia inside your PATH you can also define the path to the julia interpreter like that:
 ```python
-import pylia
+import pyjulia
 
-julia_module = pylia.Pylia("./example.jl")
+julia_module = pyjulia.Pyjulia("./example.jl")
 julia_module.julia_interpreter = "your path to julia interpreter"
 
 # execute code...
@@ -32,9 +32,9 @@ end
 ### call_func method
 Let's say the content of this julia code belongs to a file called ```example.jl```. You can now call the add and multiply functions inside your python code:
 ```python
-import pylia
+import pyjulia
 
-julia_module = pylia.Pylia("./example.jl")
+julia_module = pyjulia.Pyjulia("./example.jl")
 
 my_args = [2, 3, 5]
 
@@ -68,9 +68,9 @@ end
 Now in order to call these function within your python code you need to do this:
 > ⚠️ **_NOTE:_**  Your IDE/text editor may tell you "Unresolved attribute reference add/multiply for class Julia". There's no need to worry. It should still work just as fine.
 ```python
-import pylia
+import pyjulia
 
-julia_module = pylia.Pylia("./example.jl")
+julia_module = pyjulia.Pyjulia("./example.jl")
 
 output = julia_module.add(my_args)
 output2 = julia_module.multiply(my_args)
@@ -83,16 +83,16 @@ Your output should still look like this:
 
 The ```greet``` function inside the julia file has multiple arguments. But this doesn't prevent us from calling it from python. It works just as fine as the other examples above:
 ```python
-import pylia
+import pyjulia
 
-julia_module = pylia.Pylia("./example.jl")
-greet_args = ["Pylia", 19, 2, 3, 4, 5]
+julia_module = pyjulia.Pyjulia("./example.jl")
+greet_args = ["Pyjulia", 19, 2, 3, 4, 5]
 greeting = julia_module.greet(greet_args)
 print(greeting)
 ```
 The following output should be printed to the terminal:
 ```
-Pylia19
+pyjulia 19
 (2, 3, 4, 5)
 ```
 You can just treat them as normal positional variables and the [Fire](https://github.com/ylxdzsw/Fire.jl) package from julia will parse the arguments automatically.
