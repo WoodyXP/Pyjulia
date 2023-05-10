@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/pyjulia/__init__.py
+src/pyjulia/pyjulia.py
+src/pyjulia.egg-info/PKG-INFO
+src/pyjulia.egg-info/SOURCES.txt
+src/pyjulia.egg-info/dependency_links.txt
+src/pyjulia.egg-info/top_level.txt

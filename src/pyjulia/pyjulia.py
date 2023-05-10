@@ -1,6 +1,6 @@
 from subprocess import check_output
 
-class Pylia:
+class Pyjulia:
     """
     Used to call Julia functions from python
     """
@@ -49,4 +49,7 @@ class Pylia:
                 output = output_str.strip().decode("utf-8")
                 return output
 
-            setattr(Pylia, function_name.replace('-', '_'), func)
+            setattr(Pyjulia, function_name.replace('-', '_'), func)
+
+if __name__ == '__main__':
+    print('This is a module! Please import using:\nimport Pyjulia')
