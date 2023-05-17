@@ -6,7 +6,6 @@ def trigger_workflow():
     # Set the required information for the API request
     repository = "https://github.com/WoodyXP/Pyjulia"
     personal_token = os.getenv("GITHUB_TOKEN")
-    personal_token = "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"
     workflow_file = "downstream.yml"
 
     # Construct the API endpoint URL
