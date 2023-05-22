@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: pyjulia
-Version: 0.0.1
+Version: 0.0.2
 Summary: A package that allows to use Julia within Python.
 Author-email: Stefan Arsic <stiefelwoods@gmail.com>
 Project-URL: Homepage, https://github.com/woodyxp/Pylia
