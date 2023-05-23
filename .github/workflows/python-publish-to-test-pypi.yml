@@ -34,7 +34,7 @@ jobs:
       with:
         user: __token__
         env: pyjulia_env
-        password: ${{ secrets.PYPI_TEST_RELEASE_TOKEN }}
+        password: pypi-AgENdGVzdC5weXBpLm9yZwIkYWJiNDlhZmUtMTNkMi00ZDZlLTlmY2QtMzVjZWNlMTZhNWE0AAIPWzEsWyJweWp1bGlhIl1dAAIsWzIsWyI0ZmY4Yzc1Ni00ZGNkLTQwNGEtYTQzYi02YTk1M2NkMjM5ODYiXV0AAAYgJBOWlGgu0ERX8i7ssemJziYlh6Vr75WMVmhvJIZUyI0
         repository-url: https://test.pypi.org/legacy/
         skip-existing: true
     - name: Publish distribution 📦 to PyPI
