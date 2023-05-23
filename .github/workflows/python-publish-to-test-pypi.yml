@@ -4,13 +4,12 @@ on: push
 
 jobs:
   build-n-publish:
-    env: pyjulia_env
     name: Build and publish Python 🐍 distributions 📦 to PyPI and TestPyPI
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v2
     - name: Set up Python 3.9
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v2
       with:
         python-version: 3.9
     - name: Install pypa/build
@@ -18,7 +17,6 @@ jobs:
         python -m
         pip install
         build
-        --user
     - name: Build a binary wheel and a source tarball
       run: >-
         python -m
