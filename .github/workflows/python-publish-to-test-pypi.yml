@@ -4,7 +4,7 @@ on: push
 
 permissions:
   id-token: write
-  
+
 jobs:
   build-n-publish:
     name: Build and publish Python 🐍 distributions 📦 to PyPI and TestPyPI
@@ -32,7 +32,8 @@ jobs:
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
         user: __token__
-        password: ${{ secrets.PYPI_TEST_RELEASE_TOKEN }}
+        env:
+          password: ${{ secrets.PYPI_TEST_RELEASE_TOKEN }}
         repository-url: https://test.pypi.org/legacy/
         skip-existing: true
     - name: Publish distribution 📦 to PyPI
