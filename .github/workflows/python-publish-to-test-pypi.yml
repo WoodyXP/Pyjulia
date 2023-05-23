@@ -32,8 +32,8 @@ jobs:
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
         user: __token__
-        env:
-          password: ${{ secrets.PYPI_TEST_RELEASE_TOKEN }}
+        env: pyjulia_env
+        password: ${{ secrets.PYPI_TEST_RELEASE_TOKEN }}
         repository-url: https://test.pypi.org/legacy/
         skip-existing: true
     - name: Publish distribution 📦 to PyPI
