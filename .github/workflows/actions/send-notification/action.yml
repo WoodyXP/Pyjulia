@@ -1,9 +1,0 @@
-name: 'Send Notification'
-description: 'Sends a notification about the release'
-inputs:
-  release_tag:
-    description: 'The tag of the release'
-    required: true
-runs:
-  using: 'python'
-  main: 'index.py'
