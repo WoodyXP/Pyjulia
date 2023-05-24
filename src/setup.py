@@ -3,7 +3,7 @@ import codecs
 import os
 
 
-VERSION = '0.0.3'
+VERSION = '0.0.4'
 DESCRIPTION = 'Julia with Python'
 LONG_DESCRIPTION = 'A package that allows to use Julia within Python.'
 
