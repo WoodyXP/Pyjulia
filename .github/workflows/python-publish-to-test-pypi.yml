@@ -21,7 +21,7 @@ jobs:
         tar xf julia-1.6.7-linux-x86_64.tar.gz
     - name: Test Package
       run: >-
-        python tests/pyjulia_test.py      
+        python -m unittest tests.pyjulia_test   
     - name: Install pypa/build
       run: >-
         python -m
