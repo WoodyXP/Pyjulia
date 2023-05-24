@@ -1,1 +1,1 @@
-from pyjulia import *
+from .pyjulia import Pyjulia
