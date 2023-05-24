@@ -23,9 +23,8 @@ jobs:
       run: julia -e 'using Pkg; Pkg.add("Fire")'      
     - name: Copy example.jl
       run: cp tests/example.jl $GITHUB_WORKSPACE
-    - name: Install Stable Version Pyjulia Module
-      run: >-
-        pip install -i https://test.pypi.org/simple/ pyjulia==0.0.5
+    - name: Copy pyjulia.py
+      run: cp src/pyjulia/pyjulia.py $GITHUB_WORKSPACE
     - name: Test Pyjulia
       run: >-
         python -m unittest tests.pyjulia_test   
