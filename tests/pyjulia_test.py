@@ -1,5 +1,5 @@
 import unittest
-from pyjulia.pyjulia import *
+from pyjulia import *
 
 class TestPyJulia(unittest.TestCase):
     def test_pyjulia_functions(self):
