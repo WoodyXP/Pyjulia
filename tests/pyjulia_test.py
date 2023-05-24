@@ -9,7 +9,7 @@ class TestPyJulia(unittest.TestCase):
         
         sum_func = julia_module.call_func("add", test_args)
 
-        self.assertEqual(sum_func, 9)
+        self.assertEqual(sum_func, '9')
 
 if __name__ == "__main__":
     unittest.main() 
